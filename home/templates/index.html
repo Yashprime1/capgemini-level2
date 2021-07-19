@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+
+  <nav style="background-color: #0CCE6B;"> 
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">RecommenderX</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="">Home</a></li>
+        <li><a href="/electronics/recommender">Electronics</a></li>
+        <li><a href="/modcloth/recommender">Modcloth</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="">Home</a></li>
+    <li><a href="/electronics/recommender">Electronics</a></li>
+    <li><a href="/modcloth/recommender">Modcloth</a></li>
+  </ul>
+    <div class="row">
+        <div class="col s12 m6 l6">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static '/modcloth/dresses.jpg' %}">
+              <span class="card-title">Modcloth Recommender</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light red" href="/modcloth/recommender"><i class="material-icons">arrow_forward_ios</i></a>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col s12 m6 l6">
+            <div class="card">
+              <div class="card-image">
+                <img src="{% static '/electronics/computer_accesory.jpg' %}">
+                <span class="card-title">Electronics Recommender</span>
+                <a class="btn-floating halfway-fab waves-effect waves-light red" href="/electronics/recommender"><i class="material-icons">arrow_forward_ios</i></a>
+              </div>
+             
+            </div>
+          </div>
+       
+      </div>
+
+     
+ 
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" >
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.materialboxed');
+          var instances = M.Materialbox.init(elems,{});
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options={});
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options={});
+  });
+    </script>
+  </body>
+</html>
