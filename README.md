@@ -1,7 +1,7 @@
 # capgemini-level2
-This is for capgemini tech challenge 2021 level 2
+
 # hackathon
-This project is for hackathon 9.0
+This is for capgemini tech challenge 2021 level 2
 # Brief Summary :
 
 ## Problem Statement :
